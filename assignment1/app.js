@@ -15,11 +15,8 @@
                 return;
             }
             var items = $scope.itemsCSV.split(',');
-            $scope.lunch_status = items.length;
-            if (items.length > 0 && items.length <= 3)
-                $scope.lunch_status = "Enjoy!";
-            else if(items.length > 3)
-                $scope.lunch_status = "Too much!";
+
+            $scope.lunch_status = items.length <= 3 ? "Enjoy!" : "Too much!";
         };
     }
 })();
